@@ -1,9 +1,9 @@
-name: ci
+name: build and run docker on EB
 on:
   push:
     branches:
       - "main"
-  workflow-dispatch:
+  workflow_dispatch:
 
 
 jobs:
