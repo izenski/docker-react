@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - run: docker build -t stevealbers/react-test -f Dockerfile.dev .
-      - run: docker run -e CI=true salbers/react-test npm test
+      - run: docker run -e CI=true stevealbers/react-test npm test
 
       - name: "Generate deployement package"
         run: zip -r deploy.zip . -x '*.git*'
